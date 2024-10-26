@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  my-mongo:
+    image: mongo
+    container_name: my-mongo-for-spring
+    volumes:
+      - ./src/main/resources/data:/docker-entrypoint-initdb.d
+    ports:
+      - "27017:27017"
